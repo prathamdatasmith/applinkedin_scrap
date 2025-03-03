@@ -1,0 +1,30 @@
+scraper:
+  base_url: "https://www.linkedin.com/jobs/search"
+  headers:
+    User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  jobs_per_page: 25
+  delay:
+    between_pages: 3
+    between_jobs: 2
+  
+locations:
+  india:
+    geoId: "102713980"
+    cities:
+      - "India"
+      - "Bangalore"
+      - "Mumbai"
+      - "Delhi"
+      - "Hyderabad"
+      - "Chennai"
+      - "Pune"
+
+output:
+  file: "job_listings.csv"
+  columns:
+    - "job_title"
+    - "company"
+    - "location"
+    - "job_link"
+    - "job_description"
+    - "tech_stack"
